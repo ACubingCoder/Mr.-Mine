@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Noto Sans";
+}
+
+body {
+  background-image: url("./images/background.jpg");
+}
+
+h1 {
+  font: 4em "Noto Sans", sans-serif;
+  text-align: center;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  width: 100vw;
+  height: 15vh;
+  background-image: url("./images/headerbackground.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator div:not(.header, .results) {
+  width: 48vw;
+  height: auto;
+  margin: auto;
+  background: #000;
+  border: 1px #fff solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-left: 1px #fff solid;
+    outline: none;
+    font-family: "Noto Sans", sans-serif;
+    padding: 0.15em 0;
+    text-align: center;
+    width: 2em;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.results {
+  width: 98vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  border: 1px #fff solid;
+}
