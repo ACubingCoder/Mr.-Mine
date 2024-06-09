@@ -314,6 +314,11 @@ $(document).ready(() => {
   ];
 
   $("input").on("change", () => {
+    $("#dps").text("Original DPS: " + DPS());
+    for (let i = 0; i < 12; i++) {
+      let difference = DPS(i) - DPS();
+      list[i][0] = difference.toFixed(3);
+    }
     for (let i = 0; i < 12; i++) {
       let inputValue = parseInt($("#" + abbreviatedNames[i]).val());
       if (inputValue > max[i]) {
